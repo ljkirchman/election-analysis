@@ -114,7 +114,7 @@ for candidate in candidate_votes:
 
 
 # Save the results to our text file.
-with open(file_to_save, "w") as txt_file:    
+with open("Election_analysis.txt", "w") as txt_file:    
 
 
     # Topline functions for print formating
@@ -140,8 +140,8 @@ with open(file_to_save, "w") as txt_file:
     print("\n".join(candidate_percent))
 
 #Save the final vote to the text file.
-txt_file.write(election_results) 
-txt_file.write(candidate_percent) 
+#txt_file.write(election_results) 
+#txt_file.write(candidate_percent) 
 
 
 winning_candidate_summary = (
@@ -152,5 +152,6 @@ winning_candidate_summary = (
     f"--------------------------\n")
 
 print(winning_candidate_summary)
+#text_file.close
         
     
