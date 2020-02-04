@@ -133,15 +133,10 @@ with open("Election_analysis.txt", "w") as txt_file:
 
 
     # Print the final vote count to the terminal.
-    # print(election_results, end="")
     election_results += ("\n".join(county_percent))+("\n")+("".join(county_results))+("\n".join(candidate_percent)+("\n"))
-    #print("\n".join(county_percent))
-    #print("\n")
-    #print(county_results, end="")
     print (election_results)
 
 #Save the final vote to the text file.
-   # election_results += county_results
     txt_file.write(election_results) 
 
     
@@ -155,6 +150,6 @@ winning_candidate_summary = (
     f"--------------------------\n")
 
 print(winning_candidate_summary)
-#text_file.close
+
         
     
