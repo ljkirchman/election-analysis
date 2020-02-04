@@ -74,7 +74,7 @@ with open(file_to_load) as election_data:
         # Add a vote to that candidate's count.
         candidate_votes[candidate_name] += 1
 
-# Define county and candidate outout lists
+# Define county and candidate output lists
 county_percent=[]
 candidate_percent=[]       
 
@@ -133,15 +133,18 @@ with open("Election_analysis.txt", "w") as txt_file:
 
 
     # Print the final vote count to the terminal.
-    print(election_results, end="")
-    print("\n".join(county_percent))
-    print("\n")
-    print(county_results, end="")
-    print("\n".join(candidate_percent))
+    # print(election_results, end="")
+    election_results += ("\n".join(county_percent))+("\n")+("".join(county_results))+("\n".join(candidate_percent)+("\n"))
+    #print("\n".join(county_percent))
+    #print("\n")
+    #print(county_results, end="")
+    print (election_results)
 
 #Save the final vote to the text file.
-#txt_file.write(election_results) 
-#txt_file.write(candidate_percent) 
+   # election_results += county_results
+    txt_file.write(election_results) 
+
+    
 
 
 winning_candidate_summary = (
